@@ -1,0 +1,7 @@
+Notes:
+
+SendGrid's website doesn't like FireFox--but works fine on Chrome
+
+Ideas:
+
+Newsletter for the CS club
