@@ -9,12 +9,12 @@ import re
 
 load_dotenv()
 
+###############################################################################################################################################################
 # boiler plate borrowed from WikiMedia's tutorial
 today = datetime.datetime.now()
 date = today.strftime('%Y/%m/%d')
 
-# Choose your language, and get today's featured content.
-language_code = 'en' # English
+language_code = 'en' # which language's wiki
 headers = {
   'Authorization': f'Bearer {os.environ["WIKIMEDIA_API_KEY"]}',
   'User-Agent': 'email-day (brushnit.online@gmail.com)'
@@ -34,6 +34,7 @@ for story in response['news']:
   headline = headline.replace('"./', '"https://' + language_code + '.wikipedia.org/wiki/')
   headlines.append(headline)
 
+###############################################################################################################################################################
 # function to format HTML response; can be modified to
 def create_headlines_html(headlines_list, date):
     html_output = f"""
@@ -99,6 +100,8 @@ def create_headlines_html(headlines_list, date):
     """
     return html_output
 
+###############################################################################################################################################################
+# send email
 message = Mail(
     from_email="dabcrc@umsystem.edu",
     to_emails="dabcrc@umsystem.edu",

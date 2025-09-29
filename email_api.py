@@ -1,3 +1,5 @@
+# Example for how to use SendGrid's Email API client
+
 import os
 from dotenv import load_dotenv
 from sendgrid import SendGridAPIClient
