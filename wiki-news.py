@@ -1,3 +1,5 @@
+# reminder for self: windows task scheduled with wiki-news.bat under 
+
 import datetime
 from dotenv import load_dotenv
 import json
